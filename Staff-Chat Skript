@@ -1,0 +1,16 @@
+#Staff-Chat Skript
+
+options:
+  p: &9&lStaffChat &8&l|
+
+command /staffchat [<text>]:
+    aliases: /sc
+    permission: StaffChat.use
+    permission message: {@p} &cDenied.
+    trigger:
+        if arg 1 is not set:
+            send "{@p} &cType message so staff memebrs can read!" to player
+        if arg 1 is set:
+            loop all players:
+            if loop-player has permission "StaffChat.use":
+                send "&8[&7StaffChat&8] &9&l%player's display name%&f: %arg-1%" to loop-player
