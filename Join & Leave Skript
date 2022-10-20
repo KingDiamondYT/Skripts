@@ -1,0 +1,13 @@
+#Joining and Leaving with text!
+
+on join:
+	player has played before
+	set join message to "&a+ &5%player%&a!"
+
+on quit:
+	set quit message to "&c- &5%player%&c!"
+
+#Also added simple death skript :)
+
+on death:
+	set the death message to "&a%victim% &e&mdied to&r &c%attacker%&6!"
