@@ -1,0 +1,79 @@
+#Switch Gamemodes!
+
+command /mode [<player>]:
+	permission: staff.gm
+	permission message: &c(!) You don't have permission to execute this command.
+	trigger:
+		if argument 1 is not set:
+			if player's gamemode is survival:
+				set the player's gamemode to creative
+				send "&a(!) Your gamemode was updated to &fCreative&e."
+			else:
+				set the player's gamemode to survival
+				send "&a(!) Your gamemode was updated to &fSurvival&e."
+		else:
+			if arg-1's gamemode is survival:
+				set the arg-1's gamemode to creative
+				send "&a(!) Your gamemode was updated to &fCreative&e."
+			else:
+				set the arg-1's gamemode to survival
+				send "&a(!) Your gamemode was updated to &fSurvival&e."	
+
+command /gmswitch [<player>]:
+	permission: staff.gm.switch
+	permission message: &c(!) You don't have permission to execute this command.
+	trigger:
+		if argument 1 is not set:
+			if player's gamemode is survival:
+				set the player's gamemode to creative
+				send "&a(!) Your gamemode was updated to &fCreative&e."
+			else:
+				set the player's gamemode to survival
+				send "&a(!) Your gamemode was updated to &fSurvival&e."
+		else:
+			if arg-1's gamemode is survival:
+				set the arg-1's gamemode to creative
+				send "&a(!) Your gamemode was updated to &fCreative&e."
+			else:
+				set the arg-1's gamemode to survival
+				send "&a(!) Your gamemode was updated to &fSurvival&e."	
+
+command /gms:
+	permission: staff.gms
+	permission message: &c(!) You don't have permission to execute this command.
+	trigger:
+		set the player's gamemode to survival
+		send "&a(!) Your gamemode was updated to &fSurvival&e."
+
+
+command /gmsp:
+	permission: staff.gmsp
+	permission message: &c(!) You don't have permission to execute this command.
+	trigger:
+		set the player's gamemode to spectator
+		send "&a(!) Your gamemode was updated to &fSpectator&e."
+
+command /gmc:
+	permission: staff.gmc
+	permission message: &c(!) You don't have permission to execute this command.
+	trigger:
+		set the player's gamemode to creative
+		send "&a(!) Your gamemode was updated to &fCreative&e."
+
+command /gamemode [<text>] [<player>]:
+	permission: gamemode.sk
+	trigger:
+		if arg-1 is "creative":
+			if arg-2 is not set:
+			set player's gamemode to creative
+			send "&a(!) Your gamemode was updated to &fCreative&e." to player
+			if arg-2 is set:
+			set arg-2's gamemode to creative 
+			send "&a(!) Your gamemode was updated to &fCreative&e." to arg-2  
+		if arg-1 is "survival":
+			if arg-2 is not set:
+			set player's gamemode to survival
+			send "&a(!) Your gamemode was updated to &fSurvival&e." to player
+			if arg-2 is set:
+			set arg-2's gamemode to survival 
+			send "&a(!) Your gamemode was updated to &fSurvival&e." to arg-2        
