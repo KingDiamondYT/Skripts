@@ -1,0 +1,14 @@
+#Ever wanted to rename items with a simple command?
+
+command /rename [<text>]:
+	permission: {@permission}
+	permission message: "&cNo Permission"
+	trigger:
+		if arg-1 is set:
+		if player's tool is not air:
+			set name of player's tool to "%colored arg-1%"
+			send "&7[&3Rename&7]&8>>> &f&lYou have set the name of your tool to %colored arg-1%"
+		else:
+			send "&7[&3Rename&7]&8>>> &c&lSorry but you have to hold an item"
+	else:
+		send "&7[&3Rename&7]&8>>> &f&lPlease provide a name"
