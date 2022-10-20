@@ -1,0 +1,8 @@
+#Simple Broadcasting skript!
+
+command /broadcast <text>:
+    permission: broadcast.permission
+    permission messaged: &cDenied.
+    aliases: /announce, /broadcast, /bc, /shout
+    trigger:
+        broadcast "&4&lServer Name &7>>>&r %colored arg-1%"
