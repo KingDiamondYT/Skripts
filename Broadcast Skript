@@ -5,4 +5,6 @@ command /broadcast <text>:
     permission messaged: &cDenied.
     aliases: /announce, /broadcast, /bc, /shout
     trigger:
+        broadcast ""
         broadcast "&4&lServer Name &7>>>&r %colored arg-1%"
+        broadcast ""
