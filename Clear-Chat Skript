@@ -1,0 +1,11 @@
+#Clear-Chat Skript
+
+command /cc:
+	permission: staff.cc
+	aliases: /clearchat, /cchat, /clearc
+	trigger:
+		loop 500 times:
+			broadcast " "
+		wait 1 second
+		broadcast "&4&lServer Name &7>>> &3&lChat Cleared By &9%player%&7!"
+		stop
