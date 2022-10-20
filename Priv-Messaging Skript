@@ -1,0 +1,19 @@
+#Private messaging Skript!
+
+command /Pmsg <player> <text>:
+    description: Whisper another player
+	usage: /pmsg <player> <message>
+	aliases: /m , /pm
+	trigger:
+		set {chat.private.reply.%player%} to arg 1
+		set {chat.private.reply.%arg 1%} to player
+		send "&c[PRIV-MSG] &aTO: %arg 1% &e->&c %arg 2%" to player
+		send "&c[PRIV-MSG] &eFROM: %player% &e->&c %arg 2%" to arg 1
+
+command /Preply <text>:	
+	description: Reply command.
+	usage: /preply <message>
+	aliases: /r , /pr
+	trigger:
+		send "&c[PRIV-Reply] &aTO: %{chat.private.reply.%player%}% &e->&c %arg 1%" to player
+		send "&c[PRIV-Reply] &eFROM: %player% &e->&c %arg 1%" to {chat.private.reply.%player%}
