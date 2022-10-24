@@ -9,7 +9,7 @@ command /staffchat [<text>]:
     permission message: {@p} &cDenied.
     trigger:
         if arg 1 is not set:
-            send "{@p} &cType message so staff memebrs can read!" to player
+            send "{@p} &cType message so staff members can read!" to player
         if arg 1 is set:
             loop all players:
             if loop-player has permission "StaffChat.use":
